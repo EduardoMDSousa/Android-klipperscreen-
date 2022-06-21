@@ -4,11 +4,17 @@ Apps and how to Tut for use old tablet or smartphone as klipperscreen
 AndroidKlipperScreen
 Step 1 Download and install Klipper Screen Via Kiuah
 https://github.com/th33xitus/kiauh
+
+-Note if it is installed just update and check if there is a scean.py file in the klipperscreen folder
+
 Step 2 Download and install XSDL and Configure.
 Android can use the Play Store
 https://play.google.com/store/apps/details?id=x.org.server&hl=en_US&gl=US
 Fire Devices need to Sideload APK called x.org.server.apk listed in the data folder (uploading shortly however here is a direct download link) This version IS required for Fire devices
 https://sourceforge.net/projects/libsdl-android/files/apk/XServer-XSDL/XServer-XSDL-1.11.40.apk/download
+
+- Tested apps will be available in the APP folder - note on older devices use version .40
+
 After Install open app Youll see SDL splash screen click “CHANGE DEVICE CONFIGURATION” Click Mouse Emulation the Mouse Emulation Mode then Select Desktop, No Emulation
 Step 3 Time to create the loading script to forward the display to XSDL im doing this in putty to ssh to my PI
 SSH into PI then move to KlipperScreen folder
@@ -19,7 +25,9 @@ paste this code into your nano screen for USB CABLE
 #!/bin/bash
 DISPLAY=(your ip from blue screen):0 /home/pi/.KlipperScreen-env/bin/python3 /home/pi/KlipperScreen/screen.py
 
-Save Buffer by "Ctrl X" then yes now run
+- Note the ip appears on the blue screen when the xsdl starts successfully, if it doesn't show the blue screen use another version of the app. example images will be uploaded here
+
+Save Buffer by "Ctrl X" then yes and enter ,now run
 sudo chmod +x ./launch_klipperscreen.sh
 
 this is necessary to make our script executable
