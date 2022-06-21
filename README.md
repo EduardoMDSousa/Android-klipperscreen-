@@ -90,3 +90,5 @@ sudo systemctl restart KlippyScreenAndroid
 Now it should be working and no matter what it will run every reboot
 
 Tut disponibilizado por Márcio Pereira, desde já o meu obrigado 
+Link para lista das versões das APP 
+https://sourceforge.net/projects/libsdl-android/files/apk/XServer-XSDL/
